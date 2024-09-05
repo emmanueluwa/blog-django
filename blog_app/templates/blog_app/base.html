@@ -14,9 +14,12 @@
   </head>
   <body>
     <header>
+      {% if user.is_authenticated %}
       <a href="{% url "post_new" %}">
          {% include "./icons/file-earmark-plus.svg" %} 
       </a>
+      {% endif %}
+
       <h1><a href="/">pondering mind</a></h1>
     </header>
 
